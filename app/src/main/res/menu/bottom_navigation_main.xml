@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/develop"
+        android:enabled="true"
+        android:icon="@drawable/book"
+        android:title="تطوير"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/chat"
+        android:enabled="true"
+        android:icon="@drawable/chat"
+        android:title="حكايات"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/jobs"
+        android:enabled="true"
+        android:icon="@drawable/jobs"
+        android:title="فرص"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/event"
+        android:enabled="true"
+        android:icon="@drawable/event"
+        android:title="أحداث"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/more"
+        android:enabled="true"
+        android:icon="@drawable/more"
+        android:title="المزيد"
+        app:showAsAction="ifRoom" />
+</menu>

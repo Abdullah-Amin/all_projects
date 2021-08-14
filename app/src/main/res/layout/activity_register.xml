@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/insan_image"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:background="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:text="رجوع"
+            app:cornerRadius="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintEnd_toStartOf="@+id/insan_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <!--    <com.google.android.material.button.MaterialButton-->
+        <!--        android:id="@+id/behind"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="@dimen/_30sdp"-->
+        <!--        android:background="@color/design_default_color_on_primary"-->
+        <!--        android:text="رجوع"-->
+        <!--        app:cornerRadius="@dimen/_15sdp"-->
+        <!--        android:layout_marginTop="@dimen/_30sdp"-->
+        <!--        app:layout_constraintEnd_toStartOf="@+id/insan_image"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            app:layout_constraintTop_toTopOf="@+id/back"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintStart_toStartOf="@+id/back"
+            android:layout_marginStart="@dimen/_5sdp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edges"
+            app:layout_constraintTop_toBottomOf="@+id/insan_image"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="البريد الإلكتروني"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@+id/email_edit"
+            app:layout_constraintTop_toTopOf="@+id/email_edit"
+            app:layout_constraintBottom_toTopOf="@+id/email_edit" />
+        <EditText
+            android:id="@+id/pass_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edges"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/email_edit"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كلمة المرور"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@+id/pass_edit"
+            app:layout_constraintTop_toTopOf="@+id/pass_edit"
+            app:layout_constraintBottom_toTopOf="@+id/pass_edit" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edges"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pass_edit" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الإسم"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/name"
+            app:layout_constraintBottom_toTopOf="@+id/name" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/male"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:enabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/pass_edit"
+            android:layout_margin="@dimen/_11sdp"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/female"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:enabled="true"
+            android:layout_margin="@dimen/_11sdp"
+            app:layout_constraintEnd_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/male"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ذكر"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/male"
+            app:layout_constraintTop_toBottomOf="@+id/pass_edit"
+            android:layout_margin="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أنثى"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/female"
+            app:layout_constraintTop_toBottomOf="@+id/male"
+            android:layout_margin="@dimen/_10sdp"/>
+        <EditText
+            android:id="@+id/residence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edges"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مكان الإقامة"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@+id/residence"
+            app:layout_constraintTop_toTopOf="@+id/residence"
+            app:layout_constraintBottom_toTopOf="@+id/residence" />
+        <EditText
+            android:id="@+id/education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edges"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/residence"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مجال التعليم"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@+id/education"
+            app:layout_constraintTop_toTopOf="@+id/education"
+            app:layout_constraintBottom_toTopOf="@+id/education" />
+        <EditText
+            android:id="@+id/hobbies"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edges"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/education" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الإهتمامات"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@+id/hobbies"
+            app:layout_constraintTop_toTopOf="@+id/hobbies"
+            app:layout_constraintBottom_toTopOf="@+id/hobbies" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="العمر"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintTop_toBottomOf="@+id/education"
+            app:layout_constraintBottom_toTopOf="@+id/hobbies"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+        <EditText
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/edges"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@+id/education"
+            app:layout_constraintEnd_toStartOf="@+id/hobbies"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+        <EditText
+            android:id="@+id/extra"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:hint="إضافة إهتمامات"
+            android:background="@drawable/edges"
+            android:paddingStart="@dimen/_57sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_57sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hobbies" />
+        <EditText
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:background="#34000000"
+            android:text="+"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintTop_toTopOf="@+id/extra"
+            app:layout_constraintEnd_toEndOf="@+id/hobbies"
+            app:layout_constraintBottom_toBottomOf="@+id/extra"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="createAccount"
+            android:text="تسجيل"
+            app:cornerRadius="@dimen/_20sdp"
+            android:layout_margin="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/extra"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
