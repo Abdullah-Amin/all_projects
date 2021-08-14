@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_15sdp"
+    android:elevation="@dimen/_5sdp"
+    android:layout_margin="@dimen/_10sdp"
+    tools:context=".ui.AddNoteDialogFragment">
+
+    <LinearLayout
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/title_note_dialog_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:hint="Title"/>
+        <EditText
+            android:id="@+id/description_note_dialog_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:hint="Description"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_note_dialog_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cornerRadius="@dimen/_15sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="add"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_note_dialog_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cornerRadius="@dimen/_15sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="cancel"/>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
