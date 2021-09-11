@@ -38,7 +38,7 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModel = new ViewModelProvider(getActivity(), new ViewModelProvider.Factory() {
+        viewModel = new ViewModelProvider(requireActivity(), new ViewModelProvider.Factory() {
             @NonNull
             @Override
             public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
