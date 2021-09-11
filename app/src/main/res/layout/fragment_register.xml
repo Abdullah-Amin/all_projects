@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <registerRequest>
 
-    </registerRequest>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -96,10 +94,10 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/fragment_register_signin_btn"
+                android:id="@+id/fragment_register_register_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_in"
+                android:text="@string/register"
                 app:cornerRadius="@dimen/_15sdp"
                 android:padding="@dimen/_8sdp"
                 android:layout_marginStart="@dimen/_15sdp"
