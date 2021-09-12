@@ -20,7 +20,7 @@ public class LoginRequest {
     private String password;
     @SerializedName("phone")
     @Expose
-    private String phone;
+    private int phone;
     @SerializedName("image")
     @Expose
     private String image;
@@ -66,11 +66,11 @@ public class LoginRequest {
         this.email = email;
     }
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 

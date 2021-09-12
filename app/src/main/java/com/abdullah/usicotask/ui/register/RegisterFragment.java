@@ -1,5 +1,6 @@
 package com.abdullah.usicotask.ui.register;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,12 +17,18 @@ import android.view.ViewGroup;
 
 import com.abdullah.usicotask.R;
 import com.abdullah.usicotask.databinding.FragmentRegisterBinding;
+import com.abdullah.usicotask.model.RetrofitClient;
+import com.abdullah.usicotask.model.requests.RegisterRequest;
+import com.abdullah.usicotask.model.responses.RegisterResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RegisterFragment extends Fragment {
 
     FragmentRegisterBinding binding;
     NavController navController;
-    RegisterViewModel viewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,14 +42,32 @@ public class RegisterFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModel = new ViewModelProvider(getActivity(), new ViewModelProvider.Factory() {
-            @NonNull
-            @Override
-            public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-                return null;
-            }
-        }).get(RegisterViewModel.class);
+        RegisterRequest registerRequest = new RegisterRequest();
+        registerRequest.setEmail(binding.fragmentRegisterEmailEt.getText().toString());
+        registerRequest.setPassword(binding.fragmentRegisterPasswordEt.getText().toString());
+        registerRequest.setName(binding.fragmentRegisterNameEt.getText().toString());
+        registerRequest.setPhone(binding.fragmentRegisterPhoneEt.getText().toString());
 
-        viewModel.register();
+        binding.fragmentRegisterRegisterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RetrofitClient.getClient().register(registerRequest)
+                        .enqueue(new Callback<RegisterResponse>() {
+                            @Override
+                            public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+
+                                navController.navigate(R.id.action_registerFragment_to_profileFragment);
+                            }
+
+                            @Override
+                            public void onFailure(Call<RegisterResponse> call, Throwable t) {
+
+                            }
+                        });
+            }
+        });
+
+
+
     }
 }
