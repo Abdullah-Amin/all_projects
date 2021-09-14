@@ -1,7 +1,6 @@
 
 package com.abdullah.usicotask.model.responses;
 
-import com.abdullah.usicotask.model.requests.LoginRequest;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -13,9 +12,9 @@ public class LoginResponse {
     @SerializedName("message")
     @Expose
     private String message;
-    @SerializedName("loginRequest")
+    @SerializedName("DData")
     @Expose
-    private LoginRequest loginRequest;
+    private DData DData;
 
     public Boolean getStatus() {
         return status;
@@ -33,12 +32,12 @@ public class LoginResponse {
         this.message = message;
     }
 
-    public LoginRequest getLoginRequest() {
-        return loginRequest;
+    public DData getDData() {
+        return DData;
     }
 
-    public void setLoginRequest(LoginRequest loginRequest) {
-        this.loginRequest = loginRequest;
+    public void setDData(DData DData) {
+        this.DData = DData;
     }
 
 }

@@ -1,28 +1,37 @@
 
-package com.abdullah.usicotask.model.requests;
+package com.abdullah.usicotask.model.responses;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class LoginRequest {
+public class DData {
 
-
+    @SerializedName("id")
+    @Expose
     private Integer id;
-
+    @SerializedName("name")
+    @Expose
     private String name;
-
+    @SerializedName("email")
+    @Expose
     private String email;
-
+    @SerializedName("phone")
+    @Expose
+    private String phone;
+    @SerializedName("password")
+    @Expose
     private String password;
-
-    private int phone;
-
+    @SerializedName("image")
+    @Expose
     private String image;
-
+    @SerializedName("points")
+    @Expose
     private Integer points;
-
+    @SerializedName("credit")
+    @Expose
     private Integer credit;
-
+    @SerializedName("token")
+    @Expose
     private String token;
 
     public Integer getId() {
@@ -45,24 +54,24 @@ public class LoginRequest {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
     }
 
     public String getImage() {
